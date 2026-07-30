@@ -1,0 +1,137 @@
+/* ================================
+   AUTH HEADER (minimal, logo only)
+   ================================ */
+.auth-header {
+  padding: 24px 0;
+}
+
+.auth-header .navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ================================
+   AUTH PAGE LAYOUT
+   ================================ */
+.auth-page {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 60px;
+}
+
+.auth-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 40px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.auth-title {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* ================================
+   PASSWORD FIELD
+   ================================ */
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field .form-input {
+  padding-right: 60px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================================
+   ROLE TOGGLE (Job Seeker / Employer)
+   ================================ */
+.role-toggle-group {
+  display: flex;
+  gap: 12px;
+}
+
+.role-toggle-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.role-toggle-option:has(input:checked) {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* ================================
+   FORM OPTIONS ROW (remember me / forgot password)
+   ================================ */
+.form-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.remember-me-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.forgot-password-link {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* ================================
+   SUBMIT BUTTON & FOOTER TEXT
+   ================================ */
+.auth-submit-btn {
+  width: 100%;
+}
+
+.auth-footer-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.auth-footer-text a {
+  color: var(--color-primary);
+  font-weight: 600;
+}

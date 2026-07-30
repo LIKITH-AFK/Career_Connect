@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Jobs - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jobs.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+
+    <!-- ================================
+         NAVBAR
+         ================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="company.html">Companies</a>
+                <a href="applications.html">My Applications</a>
+            </nav>
+
+            <div class="navbar-actions" id="navbarActions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button id="navbarToggleButton" class="navbar-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ================================
+         ACCOUNT LAYOUT
+         ================================ -->
+    <div class="account-layout">
+
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <div class="account-sidebar-user">
+                <div id="sidebarAvatar" class="avatar-circle"></div>
+                <p id="sidebarUserName" class="sidebar-user-name"></p>
+            </div>
+
+            <nav class="account-nav">
+                <a href="profile.html" class="account-nav-link">My Profile</a>
+                <a href="saved.html" class="account-nav-link active-link">Saved Jobs</a>
+                <a href="applications.html" class="account-nav-link">My Applications</a>
+            </nav>
+
+            <button id="logoutButton" class="btn btn-outline account-logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <h1 class="page-heading">Saved Jobs</h1>
+            <div id="savedJobsContainer" class="jobs-list"></div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/saved.js"></script>
+</body>
+</html>

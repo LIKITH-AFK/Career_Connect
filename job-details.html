@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jobs.css">
+</head>
+<body>
+
+    <!-- ================================
+         NAVBAR
+         ================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html" class="active-link">Jobs</a>
+                <a href="company.html">Companies</a>
+                <a href="applications.html">My Applications</a>
+            </nav>
+
+            <div class="navbar-actions" id="navbarActions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button id="navbarToggleButton" class="navbar-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ================================
+         JOB DETAILS PAGE
+         ================================ -->
+    <main class="job-details-page">
+        <a href="jobs.html" class="back-link">&larr; Back to Jobs</a>
+
+        <div class="job-details-card">
+            <div class="job-details-header">
+                <div id="companyLogoText" class="company-logo-box"></div>
+
+                <div class="job-details-heading">
+                    <h1 id="jobTitleText" class="job-details-title"></h1>
+                    <p id="companyNameText" class="job-details-company"></p>
+                    <p id="jobLocationMetaText" class="job-details-meta"></p>
+                </div>
+            </div>
+
+            <div class="job-details-actions">
+                <button id="saveJobButton" class="btn btn-outline">Save Job</button>
+                <button id="applyNowButton" class="btn btn-primary">Apply Now</button>
+            </div>
+
+            <div class="details-summary-grid">
+                <div class="summary-item">
+                    <p class="summary-item-label">Salary</p>
+                    <p id="salaryText" class="summary-item-value"></p>
+                </div>
+                <div class="summary-item">
+                    <p class="summary-item-label">Experience</p>
+                    <p id="experienceText" class="summary-item-value"></p>
+                </div>
+                <div class="summary-item">
+                    <p class="summary-item-label">Job Type</p>
+                    <p id="jobTypeText" class="summary-item-value"></p>
+                </div>
+            </div>
+
+            <div class="tabs-bar">
+                <button id="overviewTabButton" class="tab-btn active-tab">Overview</button>
+                <button id="companyTabButton" class="tab-btn">About Company</button>
+            </div>
+
+            <div id="overviewTabContent" class="tab-panel active-tab">
+                <h2 class="section-heading">Job Description</h2>
+                <p id="jobDescriptionText" class="job-description-text"></p>
+
+                <h2 class="section-heading">Required Skills</h2>
+                <div id="skillsListContainer" class="skill-tags"></div>
+            </div>
+
+            <div id="companyTabContent" class="tab-panel">
+                <h2 class="section-heading" id="companyAboutHeading"></h2>
+                <p id="companyAboutText" class="company-about-text"></p>
+                <div class="details-summary-grid" style="margin-top: 20px;">
+                    <div class="summary-item">
+                        <p class="summary-item-label">Industry</p>
+                        <p id="companyIndustryText" class="summary-item-value"></p>
+                    </div>
+                    <div class="summary-item">
+                        <p class="summary-item-label">Location</p>
+                        <p id="companyLocationText" class="summary-item-value"></p>
+                    </div>
+                    <div class="summary-item">
+                        <p class="summary-item-label">Website</p>
+                        <a id="companyWebsiteLink" class="summary-item-value" href="#" target="_blank" rel="noopener"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================================
+         APPLY MODAL
+         ================================ -->
+    <div id="applyModalOverlay" class="modal-overlay hidden">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Apply for <span id="modalJobTitle"></span></h3>
+                <button id="closeModalButton" class="modal-close-btn">&times;</button>
+            </div>
+
+            <form id="applyForm" novalidate>
+                <div class="form-group">
+                    <label for="resumeInput" class="form-label">Resume</label>
+                    <input type="file" id="resumeInput" class="form-input" accept=".pdf,.doc,.docx">
+                    <span id="resumeError" class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="coverLetterInput" class="form-label">Cover Letter (Optional)</label>
+                    <textarea id="coverLetterInput" class="form-input" rows="4" placeholder="Write a short cover letter..."></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelApplyButton" class="btn btn-outline">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/job-details.js"></script>
+</body>
+</html>

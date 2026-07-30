@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/employer.css">
+</head>
+<body>
+
+    <!-- ================================
+         TOP BAR (logo only - employer section)
+         ================================ -->
+    <header class="auth-header">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+        </div>
+    </header>
+
+    <!-- ================================
+         ACCOUNT LAYOUT
+         ================================ -->
+    <div class="account-layout">
+
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <div class="account-sidebar-user">
+                <div id="sidebarAvatar" class="avatar-circle"></div>
+                <p id="sidebarUserName" class="sidebar-user-name"></p>
+            </div>
+
+            <nav class="account-nav">
+                <a href="employer-dashboard.html" class="account-nav-link">Dashboard</a>
+                <a href="post-job.html" class="account-nav-link active-link">Post Job</a>
+                <a href="manage-jobs.html" class="account-nav-link">Manage Jobs</a>
+                <a href="company-profile.html" class="account-nav-link">Company Profile</a>
+            </nav>
+
+            <button id="logoutButton" class="btn btn-outline account-logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="profile-card">
+                <h1 id="postJobHeading" class="auth-title">Post a New Job</h1>
+                <p class="auth-subtitle">Fill in the details below to list a job opening</p>
+
+                <form id="postJobForm" novalidate>
+                    <div class="form-group">
+                        <label for="jobTitleInput" class="form-label">Job Title</label>
+                        <input type="text" id="jobTitleInput" class="form-input" placeholder="e.g. Frontend Developer">
+                        <span id="jobTitleError" class="form-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobLocationSelect" class="form-label">Location</label>
+                        <select id="jobLocationSelect" class="filter-select">
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Remote">Remote</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobTypeSelect" class="form-label">Job Type</label>
+                        <select id="jobTypeSelect" class="filter-select">
+                            <option value="Full Time">Full Time</option>
+                            <option value="Part Time">Part Time</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Remote">Remote</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobExperienceSelect" class="form-label">Experience</label>
+                        <select id="jobExperienceSelect" class="filter-select">
+                            <option value="0-1 Years">0-1 Years</option>
+                            <option value="0-2 Years">0-2 Years</option>
+                            <option value="0-3 Years">0-3 Years</option>
+                            <option value="1-3 Years">1-3 Years</option>
+                            <option value="2-4 Years">2-4 Years</option>
+                            <option value="3-5 Years">3-5 Years</option>
+                            <option value="5+ Years">5+ Years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobSalaryInput" class="form-label">Salary</label>
+                        <input type="text" id="jobSalaryInput" class="form-input" placeholder="e.g. 8-15 LPA">
+                        <span id="jobSalaryError" class="form-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobSkillsInput" class="form-label">Skills (comma separated)</label>
+                        <input type="text" id="jobSkillsInput" class="form-input" placeholder="HTML, CSS, JavaScript">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobDescriptionTextarea" class="form-label">Description</label>
+                        <textarea id="jobDescriptionTextarea" class="form-input" rows="5" placeholder="Write job description..."></textarea>
+                        <span id="jobDescriptionError" class="form-error"></span>
+                    </div>
+
+                    <div class="modal-actions">
+                        <a href="manage-jobs.html" class="btn btn-outline">Cancel</a>
+                        <button type="submit" id="postJobSubmitButton" class="btn btn-primary">Post Job</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/post-job.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jobs.css">
+</head>
+<body>
+
+    <!-- ================================
+         NAVBAR
+         ================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html" class="active-link">Jobs</a>
+                <a href="company.html">Companies</a>
+                <a href="applications.html">My Applications</a>
+            </nav>
+
+            <div class="navbar-actions" id="navbarActions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button id="navbarToggleButton" class="navbar-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ================================
+         JOBS PAGE
+         ================================ -->
+    <main class="jobs-page">
+
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+            <h2 class="filters-title">Filters</h2>
+
+            <div class="filter-group">
+                <label class="filter-label">Location</label>
+                <select id="locationFilterSelect" class="filter-select">
+                    <option value="all">All Locations</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Job Type</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="job-type-checkbox" value="Full Time">
+                    Full Time
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="job-type-checkbox" value="Part Time">
+                    Part Time
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="job-type-checkbox" value="Internship">
+                    Internship
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="job-type-checkbox" value="Remote">
+                    Remote
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Experience</label>
+                <select id="experienceFilterSelect" class="filter-select">
+                    <option value="any">Any Experience</option>
+                    <option value="0-2 Years">0-2 Years</option>
+                    <option value="0-3 Years">0-3 Years</option>
+                    <option value="1-3 Years">1-3 Years</option>
+                    <option value="2-4 Years">2-4 Years</option>
+                </select>
+            </div>
+
+            <button id="applyFiltersButton" class="btn btn-primary filter-apply-btn">Apply Filters</button>
+        </aside>
+
+        <!-- Job Results -->
+        <section>
+            <div class="jobs-toolbar">
+                <input type="text" id="searchInput" class="search-input-small" placeholder="Search jobs...">
+                <p id="resultsCountText" class="results-count-text">0 jobs found</p>
+                <select id="sortSelect" class="sort-select">
+                    <option value="latest">Sort by: Latest</option>
+                    <option value="salary-high">Salary: High to Low</option>
+                    <option value="salary-low">Salary: Low to High</option>
+                </select>
+            </div>
+
+            <div id="jobsContainer" class="jobs-list"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 CareerConnect. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/jobs.js"></script>
+</body>
+</html>

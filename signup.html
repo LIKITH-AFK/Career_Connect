@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <!-- ================================
+         MINIMAL HEADER
+         ================================ -->
+    <header class="auth-header">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+        </div>
+    </header>
+
+    <!-- ================================
+         SIGNUP CARD
+         ================================ -->
+    <main class="auth-page">
+        <div class="auth-card">
+            <h1 class="auth-title">Create Your Account</h1>
+            <p class="auth-subtitle">Join CareerConnect and find your dream job</p>
+
+            <span id="signupFormError" class="form-error"></span>
+
+            <form id="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="signupNameInput" class="form-label">Full Name</label>
+                    <input type="text" id="signupNameInput" class="form-input" placeholder="Enter your full name">
+                    <span id="signupNameError" class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupEmailInput" class="form-label">Email</label>
+                    <input type="text" id="signupEmailInput" class="form-input" placeholder="Enter your email">
+                    <span id="signupEmailError" class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupPasswordInput" class="form-label">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="signupPasswordInput" class="form-input" placeholder="Create a password">
+                        <button type="button" id="togglePasswordButton" class="password-toggle-btn">Show</button>
+                    </div>
+                    <span id="signupPasswordError" class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupConfirmPasswordInput" class="form-label">Confirm Password</label>
+                    <input type="password" id="signupConfirmPasswordInput" class="form-input" placeholder="Re-enter your password">
+                    <span id="signupConfirmPasswordError" class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Role</label>
+                    <div class="role-toggle-group">
+                        <label class="role-toggle-option">
+                            <input type="radio" name="role" value="jobseeker" checked>
+                            Job Seeker
+                        </label>
+                        <label class="role-toggle-option">
+                            <input type="radio" name="role" value="employer">
+                            Employer
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-submit-btn">Sign Up</button>
+            </form>
+
+            <p class="auth-footer-text">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/employer.css">
+</head>
+<body>
+
+    <!-- ================================
+         TOP BAR (logo only - employer section)
+         ================================ -->
+    <header class="auth-header">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+        </div>
+    </header>
+
+    <!-- ================================
+         ACCOUNT LAYOUT
+         ================================ -->
+    <div class="account-layout">
+
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <div class="account-sidebar-user">
+                <div id="sidebarAvatar" class="avatar-circle"></div>
+                <p id="sidebarUserName" class="sidebar-user-name"></p>
+            </div>
+
+            <nav class="account-nav">
+                <a href="employer-dashboard.html" class="account-nav-link">Dashboard</a>
+                <a href="post-job.html" class="account-nav-link">Post Job</a>
+                <a href="manage-jobs.html" class="account-nav-link">Manage Jobs</a>
+                <a href="company-profile.html" class="account-nav-link active-link">Company Profile</a>
+            </nav>
+
+            <button id="logoutButton" class="btn btn-outline account-logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- View Mode -->
+            <section id="companyViewSection" class="profile-card hidden">
+                <div class="profile-card-header">
+                    <div id="companyLogoText" class="avatar-circle avatar-large"></div>
+
+                    <div class="profile-header-info">
+                        <h1 id="companyNameHeading"></h1>
+                        <p id="companySubtitleText" class="profile-tagline"></p>
+                    </div>
+
+                    <button id="editCompanyButton" class="btn btn-primary">Edit</button>
+                </div>
+
+                <p><a id="companyWebsiteLink" href="#" target="_blank" rel="noopener"></a></p>
+
+                <h2 class="section-heading" style="margin-top: 20px;">About Us</h2>
+                <p id="companyAboutText" class="company-about-text"></p>
+
+                <h2 class="section-heading" style="margin-top: 20px;">Open Positions</h2>
+                <div id="openPositionsContainer" class="open-positions-list"></div>
+            </section>
+
+            <!-- Create / Edit Mode -->
+            <section id="companyEditSection" class="profile-card">
+                <h2 id="companyFormHeading" class="auth-title">Set Up Your Company Profile</h2>
+                <p class="auth-subtitle">This information appears on your job listings</p>
+
+                <form id="companyEditForm" novalidate>
+                    <div class="form-group">
+                        <label for="companyNameInput" class="form-label">Company Name</label>
+                        <input type="text" id="companyNameInput" class="form-input" placeholder="e.g. Google">
+                        <span id="companyNameError" class="form-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyIndustryInput" class="form-label">Industry</label>
+                        <input type="text" id="companyIndustryInput" class="form-input" placeholder="e.g. Software">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyLocationInput" class="form-label">Location</label>
+                        <input type="text" id="companyLocationInput" class="form-input" placeholder="e.g. Hyderabad">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyWebsiteInput" class="form-label">Website</label>
+                        <input type="text" id="companyWebsiteInput" class="form-input" placeholder="https://...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyDescriptionTextarea" class="form-label">About Us</label>
+                        <textarea id="companyDescriptionTextarea" class="form-input" rows="4" placeholder="Tell candidates about your company..."></textarea>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" id="cancelCompanyEditButton" class="btn btn-outline hidden">Cancel</button>
+                        <button type="submit" id="companyFormSubmitButton" class="btn btn-primary">Create Company Profile</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/company-profile.js"></script>
+</body>
+</html>

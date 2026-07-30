@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerConnect - Find Your Dream Job</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================================
+         NAVBAR
+         ================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+
+            <nav class="navbar-links">
+                <a href="index.html" class="active-link">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="company.html">Companies</a>
+                <a href="applications.html">My Applications</a>
+            </nav>
+
+            <div class="navbar-actions" id="navbarActions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button id="navbarToggleButton" class="navbar-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ================================
+         HERO SECTION
+         ================================ -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Find Your Dream Job</h1>
+            <p class="hero-subtitle">Connect with top companies and build your career</p>
+
+            <form id="searchForm" class="search-card">
+                <div class="search-field">
+                    <input type="text" id="jobTitleInput" placeholder="Job title, skills or company">
+                </div>
+                <div class="search-field">
+                    <input type="text" id="locationInput" placeholder="Location">
+                </div>
+                <button type="submit" class="search-submit-btn">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================================
+         STATS SECTION
+         ================================ -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-card">
+                <div class="stat-item">
+                    <p id="activeJobsCount" class="stat-number">0+</p>
+                    <p class="stat-label">Active Jobs</p>
+                </div>
+                <div class="stat-item">
+                    <p id="totalCompaniesCount" class="stat-number">0+</p>
+                    <p class="stat-label">Companies</p>
+                </div>
+                <div class="stat-item">
+                    <p id="totalJobSeekersCount" class="stat-number">0+</p>
+                    <p class="stat-label">Job Seekers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 CareerConnect. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

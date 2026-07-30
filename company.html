@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jobs.css">
+    <link rel="stylesheet" href="css/company.css">
+</head>
+<body>
+
+    <!-- ================================
+         NAVBAR
+         ================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="company.html" class="active-link">Companies</a>
+                <a href="applications.html">My Applications</a>
+            </nav>
+
+            <div class="navbar-actions" id="navbarActions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button id="navbarToggleButton" class="navbar-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ================================
+         COMPANIES PAGE
+         ================================ -->
+    <main class="companies-page">
+        <h1 class="page-heading">Companies</h1>
+        <p class="page-subheading">Discover companies hiring on CareerConnect</p>
+
+        <div class="companies-toolbar">
+            <input type="text" id="companySearchInput" class="search-input-small" placeholder="Search companies by name or industry...">
+        </div>
+
+        <div id="companiesGrid" class="companies-grid"></div>
+    </main>
+
+    <!-- ================================
+         COMPANY DETAILS MODAL
+         ================================ -->
+    <div id="companyModalOverlay" class="modal-overlay hidden">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalCompanyName"></h3>
+                <button id="closeCompanyModalButton" class="modal-close-btn">&times;</button>
+            </div>
+
+            <p id="modalCompanyMeta" class="profile-tagline" style="margin-bottom: 16px;"></p>
+            <p><a id="modalCompanyWebsite" href="#" target="_blank" rel="noopener"></a></p>
+
+            <h2 class="section-heading" style="margin-top: 16px;">About</h2>
+            <p id="modalCompanyDescription" class="company-about-text"></p>
+
+            <h2 class="section-heading" style="margin-top: 16px;">Open Positions</h2>
+            <div id="modalOpenPositionsContainer" class="open-positions-list"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 CareerConnect. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/company.js"></script>
+</body>
+</html>

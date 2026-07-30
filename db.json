@@ -1,0 +1,263 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Likith Sai Ram",
+      "email": "likith@example.com",
+      "password": "pass1234",
+      "role": "jobseeker",
+      "profilePic": "",
+      "phone": "+91 9876543210",
+      "location": "Hyderabad, India",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "MySQL"
+      ],
+      "education": "B.Tech",
+      "experience": "Fresher"
+    },
+    {
+      "id": "2",
+      "name": "Priya Sharma",
+      "email": "employer@example.com",
+      "password": "pass1234",
+      "role": "employer",
+      "profilePic": "",
+      "phone": "+91 9123456780",
+      "location": "Bangalore, India",
+      "companyId": 2
+    },
+    {
+      "name": "GURI LIKITH SAI RAM",
+      "email": "likithsairam15@gmail.com",
+      "password": "GLikith@7258",
+      "role": "jobseeker",
+      "profilePic": "",
+      "phone": "",
+      "location": "",
+      "skills": [],
+      "education": "",
+      "experience": "",
+      "id": "beMFRhi6UPo"
+    },
+    {
+      "name": "Ravi Teja",
+      "email": "raviteja@10kcoders.com",
+      "password": "12345678",
+      "role": "employer",
+      "profilePic": "",
+      "phone": "",
+      "location": "",
+      "skills": [],
+      "education": "",
+      "experience": "",
+      "id": "oN9h30DHbZM",
+      "companyId": "C6wJRBjtY0Y"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Google",
+      "location": "Hyderabad",
+      "industry": "Software",
+      "logo": "google.png",
+      "website": "https://google.com",
+      "description": "Technology Company"
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "location": "Bangalore",
+      "industry": "Software",
+      "logo": "microsoft.png",
+      "website": "https://microsoft.com",
+      "description": "Technology Company"
+    },
+    {
+      "id": "3",
+      "name": "Amazon",
+      "location": "Hyderabad",
+      "industry": "E-Commerce",
+      "logo": "amazon.png",
+      "website": "https://amazon.com",
+      "description": "E-Commerce and Cloud Company"
+    },
+    {
+      "id": "4",
+      "name": "TCS",
+      "location": "Chennai",
+      "industry": "IT Services",
+      "logo": "tcs.png",
+      "website": "https://tcs.com",
+      "description": "IT Services and Consulting Company"
+    },
+    {
+      "name": "10K Coders",
+      "industry": "IT",
+      "location": "Hyderabad",
+      "website": "10000Coders.com",
+      "logo": "",
+      "description": "",
+      "id": "C6wJRBjtY0Y"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "companyId": 1,
+      "location": "Hyderabad",
+      "salary": "8-15 LPA",
+      "experience": "0-2 Years",
+      "type": "Full Time",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      "description": "Need a Frontend Developer skilled in HTML, CSS and JavaScript to build responsive user interfaces.",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "title": "Software Engineer",
+      "companyId": 2,
+      "location": "Bangalore",
+      "salary": "10-20 LPA",
+      "experience": "0-3 Years",
+      "type": "Full Time",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "MySQL"
+      ],
+      "description": "Looking for a Software Engineer with experience in Java and Spring Boot to work on backend services.",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "title": "Web Developer",
+      "companyId": 3,
+      "location": "Hyderabad",
+      "salary": "6-10 LPA",
+      "experience": "1-3 Years",
+      "type": "Full Time",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js"
+      ],
+      "description": "Web Developer needed to maintain and improve internal web applications.",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "title": "Full Stack Developer",
+      "companyId": 4,
+      "location": "Chennai",
+      "salary": "7-12 LPA",
+      "experience": "2-4 Years",
+      "type": "Full Time",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+      "description": "Full Stack Developer required to work across frontend and backend of client projects.",
+      "status": "Active"
+    },
+    {
+      "title": "Java Full Stack Developer",
+      "companyId": "C6wJRBjtY0Y",
+      "location": "Hyderabad",
+      "type": "Full Time",
+      "experience": "0-1 Years",
+      "salary": "4-6LPA",
+      "skills": [
+        "JAVA",
+        "HTML",
+        "CSS",
+        "JAVASCIPT",
+        "SQL",
+        "REACT.JS",
+        "BOOTSTRAP",
+        "SPRINGBOOT"
+      ],
+      "description": "_null_",
+      "status": "Active",
+      "id": "bWo112muf9M"
+    }
+  ],
+  "applications": [
+    {
+      "id": "1",
+      "userId": 1,
+      "jobId": 1,
+      "status": "Interview Scheduled",
+      "appliedDate": "2026-07-20"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "jobId": 2,
+      "status": "Under Review",
+      "appliedDate": "2026-07-18"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "jobId": 3,
+      "status": "Applied",
+      "appliedDate": "2026-07-15"
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "jobId": 4,
+      "status": "Rejected",
+      "appliedDate": "2026-07-10"
+    },
+    {
+      "userId": "beMFRhi6UPo",
+      "jobId": "3",
+      "status": "Applied",
+      "appliedDate": "2026-07-29",
+      "resumeFileName": "Likith_Sai_Resume.pdf",
+      "coverLetter": "",
+      "id": "9W112odfD1Y"
+    }
+  ],
+  "savedJobs": [
+    {
+      "id": "1",
+      "userId": 1,
+      "jobId": 1
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "jobId": 2
+    },
+    {
+      "userId": "beMFRhi6UPo",
+      "jobId": "4",
+      "id": "X_ZZgePBcJQ"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "userId": 1,
+      "message": "Your application for Frontend Developer at Google was shortlisted for an interview.",
+      "read": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jobs.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+
+    <!-- ================================
+         NAVBAR
+         ================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="company.html">Companies</a>
+                <a href="applications.html">My Applications</a>
+            </nav>
+
+            <div class="navbar-actions" id="navbarActions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button id="navbarToggleButton" class="navbar-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ================================
+         ACCOUNT LAYOUT
+         ================================ -->
+    <div class="account-layout">
+
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <div class="account-sidebar-user">
+                <div id="sidebarAvatar" class="avatar-circle"></div>
+                <p id="sidebarUserName" class="sidebar-user-name"></p>
+            </div>
+
+            <nav class="account-nav">
+                <a href="profile.html" class="account-nav-link active-link">My Profile</a>
+                <a href="saved.html" class="account-nav-link">Saved Jobs</a>
+                <a href="applications.html" class="account-nav-link">My Applications</a>
+            </nav>
+
+            <button id="logoutButton" class="btn btn-outline account-logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- View Mode -->
+            <section id="profileViewSection" class="profile-card">
+                <div class="profile-card-header">
+                    <div id="profileAvatar" class="avatar-circle avatar-large"></div>
+
+                    <div class="profile-header-info">
+                        <h1 id="profileNameText"></h1>
+                        <p id="profileTaglineText" class="profile-tagline"></p>
+                    </div>
+
+                    <button id="editProfileButton" class="btn btn-primary">Edit Profile</button>
+                </div>
+
+                <div class="profile-contact-list">
+                    <p id="profileEmailText" class="profile-contact-item"></p>
+                    <p id="profilePhoneText" class="profile-contact-item"></p>
+                    <p id="profileLocationText" class="profile-contact-item"></p>
+                </div>
+
+                <h2 class="section-heading">Skills</h2>
+                <div id="profileSkillsContainer" class="skill-tags"></div>
+            </section>
+
+            <!-- Edit Mode -->
+            <section id="profileEditSection" class="profile-card hidden">
+                <h2 class="auth-title">Edit Profile</h2>
+                <p class="auth-subtitle">Update your details below</p>
+
+                <form id="profileEditForm" novalidate>
+                    <div class="form-group">
+                        <label for="editProfilePicInput" class="form-label">Profile Picture URL</label>
+                        <input type="text" id="editProfilePicInput" class="form-input" placeholder="https://...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editNameInput" class="form-label">Full Name</label>
+                        <input type="text" id="editNameInput" class="form-input">
+                        <span id="editNameError" class="form-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editPhoneInput" class="form-label">Phone</label>
+                        <input type="text" id="editPhoneInput" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editLocationInput" class="form-label">Location</label>
+                        <input type="text" id="editLocationInput" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editEducationInput" class="form-label">Education</label>
+                        <input type="text" id="editEducationInput" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editExperienceInput" class="form-label">Experience</label>
+                        <input type="text" id="editExperienceInput" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editSkillsInput" class="form-label">Skills (comma separated)</label>
+                        <input type="text" id="editSkillsInput" class="form-input" placeholder="HTML, CSS, JavaScript">
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" id="cancelEditButton" class="btn btn-outline">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

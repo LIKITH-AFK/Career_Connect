@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/employer.css">
+</head>
+<body>
+
+    <!-- ================================
+         TOP BAR (logo only - employer section)
+         ================================ -->
+    <header class="auth-header">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+        </div>
+    </header>
+
+    <!-- ================================
+         ACCOUNT LAYOUT
+         ================================ -->
+    <div class="account-layout">
+
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <div class="account-sidebar-user">
+                <div id="sidebarAvatar" class="avatar-circle"></div>
+                <p id="sidebarUserName" class="sidebar-user-name"></p>
+            </div>
+
+            <nav class="account-nav">
+                <a href="employer-dashboard.html" class="account-nav-link active-link">Dashboard</a>
+                <a href="post-job.html" class="account-nav-link">Post Job</a>
+                <a href="manage-jobs.html" class="account-nav-link">Manage Jobs</a>
+                <a href="company-profile.html" class="account-nav-link">Company Profile</a>
+            </nav>
+
+            <button id="logoutButton" class="btn btn-outline account-logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <h1 class="page-heading">Employer Dashboard</h1>
+            <p class="page-subheading">Manage your hiring process</p>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <p id="activeJobsStatNumber" class="stat-card-number">0</p>
+                    <p class="stat-card-label">Active Jobs</p>
+                </div>
+                <div class="stat-card">
+                    <p id="totalApplicationsStatNumber" class="stat-card-number">0</p>
+                    <p class="stat-card-label">Total Applications</p>
+                </div>
+                <div class="stat-card">
+                    <p id="shortlistedStatNumber" class="stat-card-number">0</p>
+                    <p class="stat-card-label">Shortlisted</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2 class="section-heading">Applications Overview</h2>
+                <div id="applicationsChartContainer" class="bar-chart"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/employer-dashboard.js"></script>
+</body>
+</html>

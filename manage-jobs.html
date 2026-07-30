@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Jobs - CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/employer.css">
+</head>
+<body>
+
+    <!-- ================================
+         TOP BAR (logo only - employer section)
+         ================================ -->
+    <header class="auth-header">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">CareerConnect</a>
+        </div>
+    </header>
+
+    <!-- ================================
+         ACCOUNT LAYOUT
+         ================================ -->
+    <div class="account-layout">
+
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <div class="account-sidebar-user">
+                <div id="sidebarAvatar" class="avatar-circle"></div>
+                <p id="sidebarUserName" class="sidebar-user-name"></p>
+            </div>
+
+            <nav class="account-nav">
+                <a href="employer-dashboard.html" class="account-nav-link">Dashboard</a>
+                <a href="post-job.html" class="account-nav-link">Post Job</a>
+                <a href="manage-jobs.html" class="account-nav-link active-link">Manage Jobs</a>
+                <a href="company-profile.html" class="account-nav-link">Company Profile</a>
+            </nav>
+
+            <button id="logoutButton" class="btn btn-outline account-logout-btn">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="page-header-row">
+                <h1 class="page-heading">Manage Jobs</h1>
+                <a href="post-job.html" class="btn btn-primary">+ Post New Job</a>
+            </div>
+
+            <div class="applications-table-wrapper">
+                <table class="applications-table">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Applications</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="manageJobsTableBody"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/manage-jobs.js"></script>
+</body>
+</html>
