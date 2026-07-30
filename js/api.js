@@ -1,7 +1,7 @@
 // ================================
 // CONSTANTS
 // ================================
-const BASE_URL = "https://career-connect-backend-api.onrender.com";
+const BASE_URL = "http://localhost:3000";
 
 // ================================
 // FUNCTIONS
